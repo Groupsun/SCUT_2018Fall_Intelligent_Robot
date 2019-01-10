@@ -1,0 +1,1054 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+  info [
+    "Example use of a Bumper TouchSensor device."
+  ]
+  title "Bumper"
+}
+Viewpoint {
+  orientation 0.5877943050312157 0.5671231313219195 0.576948185621977 4.182217551419006
+  position 0.18512313371921377 8.870190313441782 1.0827724647849146
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 3 3
+  floorTileSize 0.25 0.25
+}
+Ball {
+  translation 1.361232904592796 0.09991367200842229 -0.6091686227498088
+  radius 0.1
+}
+Ball {
+  translation 0.0770813223176873 0.09991367200842229 0.7587031605869914
+  name "ball(8)"
+  radius 0.1
+}
+Ball {
+  translation -1.2556420598580083 0.09991367200842229 0.6463330800070315
+  name "ball(1)"
+  color 0.9372549019607843 0.1607843137254902 0.1607843137254902
+  radius 0.1
+}
+Ball {
+  translation -1.0832068962692911 0.09991367199895483 -0.9239179703644796
+  rotation -0.897885056176216 0 -0.4402299693290242 0.6503142533591835
+  name "ball(2)"
+  color 0.9372549019607843 0.1607843137254902 0.1607843137254902
+  radius 0.1
+}
+Ball {
+  translation -0.9097593135959073 0.0999126195176495 -0.6152758330693384
+  name "ball(7)"
+  color 0.9372549019607843 0.1607843137254902 0.1607843137254902
+  radius 0.1
+}
+Ball {
+  translation 0.016867214550960408 0.09991367200842229 -0.6676458635089411
+  name "ball(3)"
+  color 0.9372549019607843 0.1607843137254902 0.1607843137254902
+  radius 0.1
+}
+Ball {
+  translation 0.8981548045464635 0.09991367200842229 -0.7426673727524244
+  name "ball(4)"
+  color 0.9372549019607843 0.1607843137254902 0.1607843137254902
+  radius 0.1
+}
+Ball {
+  translation 0.7526659831878163 0.09991367200842229 0.3976426090330083
+  name "ball(5)"
+  color 0.9372549019607843 0.1607843137254902 0.1607843137254902
+  radius 0.1
+}
+Ball {
+  translation 0.571706567571066 0.09991367200842229 0.9977683873012744
+  name "ball(6)"
+  color 0.9372549019607843 0.1607843137254902 0.1607843137254902
+  radius 0.1
+}
+DEF GREEN_BOX Solid {
+  translation -0.8028730803589837 0.050000000000013325 0.8637185745719576
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 0.2189099510000001
+        metalness 0
+      }
+      geometry DEF BOX0 Box {
+        size 0.23 0.1 0.1
+      }
+    }
+  ]
+  name "green box(3)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX0
+  }
+}
+DEF GREEN_BOX Solid {
+  translation -0.33918242786097275 0.05 1.1940807183760147
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 0.2189099510000001
+        metalness 0
+      }
+      geometry DEF BOX0 Box {
+        size 0.23 0.1 0.1
+      }
+    }
+  ]
+  name "green box(2)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX0
+  }
+}
+DEF GREEN_BOX Solid {
+  translation -0.0635739492744482 0.05 -1.3686883369175478
+  rotation 0 1 0 0.7853981610000004
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 0.2189099510000001
+        metalness 0
+      }
+      geometry DEF BOX0 Box {
+        size 0.23 0.1 0.1
+      }
+    }
+  ]
+  name "green box(1)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX0
+  }
+}
+DEF GREEN_BOX Solid {
+  translation -1.2764432322434562 0.05 1.153344262460446
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 0.2189099510000001
+        metalness 0
+      }
+      geometry DEF BOX0 Box {
+        size 0.23 0.1 0.1
+      }
+    }
+  ]
+  name "green box(4)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX0
+  }
+}
+DEF GREEN_BOX Solid {
+  translation -0.9386374206257768 0.05 0.20116655756455248
+  rotation -2.956558841448767e-16 -1 1.2246467991473532e-16 0.7853981801795871
+  scale 1.8403099339276179 1.8403099339276179 1.8403099339276179
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 0.2189099510000001
+        metalness 0
+      }
+      geometry DEF BOX0 Box {
+        size 0.23 0.1 0.1
+      }
+    }
+  ]
+  name "green box(8)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX0
+  }
+}
+DEF GREEN_BOX Solid {
+  translation -0.05 0.05 -0.25
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 0.2189099510000001
+        metalness 0
+      }
+      geometry DEF BOX0 Box {
+        size 0.23 0.1 0.1
+      }
+    }
+  ]
+  name "green box(7)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX0
+  }
+}
+DEF BLUE_BOX Solid {
+  translation 0.3254752951300318 0.04999999999999956 0.2680028206082996
+  rotation 0 1 0 0.31
+  scale 1.6804604038730084 1.6804604038730084 1.6804604038730084
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.519341125
+        metalness 0
+      }
+      geometry DEF BOX1 Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue box"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX1
+  }
+}
+DEF BLUE_BOX Solid {
+  translation 0.26575713696766556 0.04999999999999956 -0.49742424774896343
+  rotation 0 1 0 0.31
+  scale 1.6804604038730084 1.6804604038730084 1.6804604038730084
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.519341125
+        metalness 0
+      }
+      geometry DEF BOX1 Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue box(12)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX1
+  }
+}
+DEF BLUE_BOX Solid {
+  translation 0.876101906524707 0.04999999999999956 -0.015807605289340387
+  rotation 0 1 0 0.31
+  scale 1.6804604038730084 1.6804604038730084 1.6804604038730084
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.519341125
+        metalness 0
+      }
+      geometry DEF BOX1 Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue box(11)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX1
+  }
+}
+DEF BLUE_BOX Solid {
+  translation 1.0135189134018303 0.04999999999999956 -1.14682108981483
+  rotation 0 1 0 0.31
+  scale 1.6804604038730084 1.6804604038730084 1.6804604038730084
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.519341125
+        metalness 0
+      }
+      geometry DEF BOX1 Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue box(8)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX1
+  }
+}
+DEF BLUE_BOX Solid {
+  translation 0.9987005097323014 0.04999999999999956 -1.1220679147760797
+  rotation 0 1 0 0.31
+  scale 1.6804604038730084 1.6804604038730084 1.6804604038730084
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.519341125
+        metalness 0
+      }
+      geometry DEF BOX1 Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue box(9)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX1
+  }
+}
+DEF BLUE_BOX Solid {
+  translation 0.6343115733806294 0.04999999999999956 -1.3904730390501339
+  rotation 0 1 0 0.31
+  scale 1.6804604038730084 1.6804604038730084 1.6804604038730084
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.519341125
+        metalness 0
+      }
+      geometry DEF BOX1 Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue box(10)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX1
+  }
+}
+DEF BLUE_BOX Solid {
+  translation 1.112525742526521 0.05000000000000045 0.8897535012370201
+  rotation 0 1 0 5.284188352999999
+  scale 1.6804604038730084 1.6804604038730084 1.6804604038730084
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.519341125
+        metalness 0
+      }
+      geometry DEF BOX1 Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue box(5)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX1
+  }
+}
+DEF BLUE_BOX Solid {
+  translation 1.0793164075383295 0.05 1.377731193563375
+  rotation 0 1 0 0.31
+  scale 1.6804604038730084 1.6804604038730084 1.6804604038730084
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.519341125
+        metalness 0
+      }
+      geometry DEF BOX1 Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue box(6)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX1
+  }
+}
+DEF BLUE_BOX Solid {
+  translation 1.0983668535890256 0.05 -0.3069956555599993
+  rotation 0 1 0 0.31
+  scale 1.6804604038730084 1.6804604038730084 1.6804604038730084
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.519341125
+        metalness 0
+      }
+      geometry DEF BOX1 Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue box(4)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX1
+  }
+}
+DEF BLUE_BOX Solid {
+  translation -0.5620068899054848 0.05 -0.2613508774176183
+  rotation 0 1 0 0.31
+  scale 1.6804604038730084 1.6804604038730084 1.6804604038730084
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.519341125
+        metalness 0
+      }
+      geometry DEF BOX1 Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue box(3)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX1
+  }
+}
+DEF BLUE_BOX Solid {
+  translation -0.43033399356155955 0.0499999999999889 -1.1130778433146995
+  rotation 0 1 0 0.31
+  scale 1.6804604038730084 1.6804604038730084 1.6804604038730084
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.519341125
+        metalness 0
+      }
+      geometry DEF BOX1 Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue box(2)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX1
+  }
+}
+DEF BLUE_BOX Solid {
+  translation -0.2659583718196481 0.04999999999999068 0.20326039723139777
+  rotation 0 1 0 0.31
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.519341125
+        metalness 0
+      }
+      geometry DEF BOX1 Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue box(1)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX1
+  }
+}
+DEF YELLOW_BOX Solid {
+  translation 1.3466769001040904 0.05 -1.0549225459585974
+  rotation 0 -1 0 1.1707963603591738
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 0.03934117200000009
+        metalness 0
+      }
+      geometry DEF BOX2 Box {
+        size 0.05 0.1 0.3
+      }
+    }
+  ]
+  name "yellow box(5)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX2
+  }
+}
+DEF YELLOW_BOX Solid {
+  translation 0.43298074647524554 0.04999999999999201 -1.041060519656352
+  rotation 0 1 0 0.4
+  scale 1.1606858195656995 1.1606858195656995 1.1606858195656995
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 0.03934117200000009
+        metalness 0
+      }
+      geometry DEF BOX2 Box {
+        size 0.05 0.1 0.3
+      }
+    }
+  ]
+  name "yellow box(2)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX2
+  }
+}
+DEF YELLOW_BOX Solid {
+  translation -0.3137103713711371 0.05 0.703911189847435
+  rotation 0 1 0 0.4
+  scale 1.1606858195656995 1.1606858195656995 1.1606858195656995
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 0.03934117200000009
+        metalness 0
+      }
+      geometry DEF BOX2 Box {
+        size 0.05 0.1 0.3
+      }
+    }
+  ]
+  name "yellow box(3)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX2
+  }
+}
+DEF YELLOW_BOX Solid {
+  translation 0.3288203911599286 0.050000000000016434 1.2763181552079503
+  rotation 0 1 0 4.850589579
+  scale 1.1606858195656995 1.1606858195656995 1.1606858195656995
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 0.03934117200000009
+        metalness 0
+      }
+      geometry DEF BOX2 Box {
+        size 0.05 0.1 0.3
+      }
+    }
+  ]
+  name "yellow box(4)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX2
+  }
+}
+DEF YELLOW_BOX Solid {
+  translation 0.3288203911599286 0.050000000000016434 1.2763181552079503
+  rotation 0 1 0 4.850589579
+  scale 1.1606858195656995 1.1606858195656995 1.1606858195656995
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 0.03934117200000009
+        metalness 0
+      }
+      geometry DEF BOX2 Box {
+        size 0.05 0.1 0.3
+      }
+    }
+  ]
+  name "yellow box(6)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX2
+  }
+}
+DEF YELLOW_BOX Solid {
+  translation 1.3061608810210974 0.050000000000016434 0.665174250332558
+  rotation 0 -1 0 2.217993908359173
+  scale 1.1606858195656995 1.1606858195656995 1.1606858195656995
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 0.03934117200000009
+        metalness 0
+      }
+      geometry DEF BOX2 Box {
+        size 0.05 0.1 0.3
+      }
+    }
+  ]
+  name "yellow box(7)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX2
+  }
+}
+DEF PINK_BOX Solid {
+  translation 0.5465353953144448 0.05000000000000711 -0.2758809086198649
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.1 0.3
+        roughness 0.16827074099999995
+        metalness 0
+      }
+      geometry DEF BOX3 Box {
+        size 0.15 0.1 0.08
+      }
+    }
+  ]
+  name "red box"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX3
+  }
+}
+DEF PINK_BOX Solid {
+  translation 1.2066958475837777 0.05 0.21698705096359616
+  rotation 0 1 0 5.23598774
+  scale 1.5911832712060372 1.5911832712060372 1.5911832712060372
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.1 0.3
+        roughness 0.16827074099999995
+        metalness 0
+      }
+      geometry DEF BOX3 Box {
+        size 0.15 0.1 0.08
+      }
+    }
+  ]
+  name "red box(2)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX3
+  }
+}
+DEF PINK_BOX Solid {
+  translation -0.35842005485769635 0.05 -0.8313913463927661
+  rotation 0 1 0 5.23598774
+  scale 1.5911832712060372 1.5911832712060372 1.5911832712060372
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.1 0.3
+        roughness 0.16827074099999995
+        metalness 0
+      }
+      geometry DEF BOX3 Box {
+        size 0.15 0.1 0.08
+      }
+    }
+  ]
+  name "red box(1)"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      roughness 1.1102230246251565e-16
+      metalness 0
+    }
+    geometry USE BOX3
+  }
+}
+DEF COMPASS_ROBOT Robot {
+  translation -1.4375 -0.00023313329785825537 -1.4375
+  rotation 0.00378230066603881 0.9999254485269259 0.011609978031751988 -2.409241033750456
+  children [
+    GPS {
+      rotation 0 1 0 1.7016996938995748
+    }
+    Transform {
+      translation 0 0.0415 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.0820075 0.364731 0.8
+            roughness 1
+            metalness 0
+          }
+          geometry DEF BODY Cylinder {
+            height 0.08
+            radius 0.045
+          }
+        }
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1939.150873682933
+        axis -1 0 0
+        anchor 0 0.025 0
+      }
+      device [
+        RotationalMotor {
+          name "left wheel motor"
+          consumptionFactor 70
+        }
+        PositionSensor {
+          name "left wheel sensor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.04499999999999968 0.025 0
+        rotation 1 0 0 1.0548709283796138
+        children [
+          DEF WHEEL Transform {
+            rotation 0 0 1 1.57
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 1 0 0
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.01
+                  radius 0.025
+                }
+              }
+            ]
+          }
+        ]
+        name "left wheel"
+        boundingObject USE WHEEL
+        physics DEF PHYSICS_WHEEL Physics {
+          density -1
+          mass 0.05
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 2309.63065431516
+        axis -1 0 0
+        anchor 0 0.025 0
+      }
+      device [
+        RotationalMotor {
+          name "right wheel motor"
+          consumptionFactor 70
+        }
+        PositionSensor {
+          name "right wheel sensor"
+        }
+      ]
+      endPoint Solid {
+        translation 0.04499999999999994 0.025 0
+        rotation -1 0 0 5.39748188743132
+        children [
+          USE WHEEL
+        ]
+        name "right wheel"
+        boundingObject USE WHEEL
+        physics USE PHYSICS_WHEEL
+      }
+    }
+    DistanceSensor {
+      translation 0.02 0.063 -0.042
+      rotation 0 1 0 1.1781
+      children [
+        DEF SENSOR Transform {
+          rotation 0 0 1 1.57
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.975691 0.981481 0.0252992
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.004
+                radius 0.008
+              }
+            }
+          ]
+        }
+      ]
+      name "ds0"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation 0.042 0.063 -0.02
+      rotation 0 1 0 0.3927
+      children [
+        USE SENSOR
+      ]
+      name "ds1"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation 0.042 0.063 0.02
+      rotation 0 1 0 5.8905
+      children [
+        USE SENSOR
+      ]
+      name "ds2"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation 0.02 0.063 0.042
+      rotation 0 1 0 5.1051
+      children [
+        USE SENSOR
+      ]
+      name "ds3"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation -0.02 0.063 0.042
+      rotation 0 1 0 4.3197
+      children [
+        USE SENSOR
+      ]
+      name "ds4"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation -0.042 0.063 0.02
+      rotation 0 1 0 3.5343
+      children [
+        USE SENSOR
+      ]
+      name "ds5"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation -0.042 0.063 -0.02
+      rotation 0 1 0 2.7489
+      children [
+        USE SENSOR
+      ]
+      name "ds6"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation -0.02 0.063 -0.042
+      rotation 0 1 0 1.9635
+      children [
+        USE SENSOR
+      ]
+      name "ds7"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    Compass {
+      translation 0 0.05 0
+      rotation 0 1 0 1.7016996938995748
+    }
+    DEF SMILE Transform {
+      translation 0 0.025 -0.036
+      rotation 0.7745972408364944 0.44721228048294853 0.4472139204829502 1.8234794
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.721569 0.290196 0.290196
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.018
+            radius 0.009
+            subdivision 3
+          }
+        }
+      ]
+    }
+    DEF PIVOT Transform {
+      translation 0 0.06 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.8 0.8 0.8
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.1
+            radius 0.002
+          }
+        }
+      ]
+    }
+    DEF NEEDLE HingeJoint {
+      jointParameters HingeJointParameters {
+        position 0.8348030905870081
+        axis 0 1 0
+        anchor 0 0.1 0
+      }
+      device [
+        RotationalMotor {
+          name "arrow"
+        }
+      ]
+      endPoint Solid {
+        translation 0 0.1 0
+        rotation 0 1 0 0.8348030905870081
+        children [
+          DEF NEEDLE_BODY Transform {
+            rotation 1 0 0 1.5708
+            children [
+              Shape {
+                appearance DEF NEEDLE_APP PBRAppearance {
+                  baseColor 1 1 0
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.1
+                  radius 0.005
+                }
+              }
+            ]
+          }
+          DEF NEEDLE_HEAD Transform {
+            translation 0 0 0.05
+            rotation 1 0 0 1.5708
+            children [
+              Shape {
+                appearance USE NEEDLE_APP
+                geometry Cone {
+                  bottomRadius 0.01
+                  height 0.02
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+  name "MyBot"
+  boundingObject DEF MYBOT_BOUNDING Transform {
+    translation 0 0.0414 0
+    rotation 0 1 0 -1.5708003061004252
+    children [
+      USE BODY
+    ]
+  }
+  physics DEF MYBOT_PHYSICS Physics {
+    density -1
+    mass 0.5
+  }
+  rotationStep 0.25
+  controller "my_controller"
+}
