@@ -5,3 +5,5 @@
 包括以下算法：
 1. 势场法，能够处理静态以及动态避障情景。
 2. 栅格法。内含三种寻路算法：DFS、BFS以及启发式搜索的RRT。
+
+使用软件：Webots: https://cyberbotics.com/
