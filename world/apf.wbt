@@ -7,8 +7,8 @@ WorldInfo {
   northDirection 1 0 1
 }
 Viewpoint {
-  orientation 0.5877943050312157 0.5671231313219195 0.576948185621977 4.182217551419006
-  position -1.312354064227263 1.182728570476261 -1.450704581264649
+  orientation 0.4887740633488589 0.6760177457417205 0.5514525568348817 4.213670319467463
+  position -1.1865652304002856 1.9638001475741198 -1.2941989611321014
 }
 TexturedBackground {
 }
@@ -19,8 +19,8 @@ RectangleArena {
   floorTileSize 0.25 0.25
 }
 DEF COMPASS_ROBOT Robot {
-  translation -1.4375 -4.615762267600604e-05 -1.4375
-  rotation 0.04189477001648888 0.9989913043959253 -0.016161744540523257 0.7369304853812236
+  translation -0.6145630581352606 -0.0009233486886834133 -1.0713548461204354
+  rotation -0.007916772902767277 0.9999473769883855 -0.006524412682627554 -1.3647425655007863
   children [
     GPS {
     }
@@ -42,7 +42,7 @@ DEF COMPASS_ROBOT Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 1118.448129608092
+        position 1111.3707854736408
         axis -1 0 0
         anchor 0 0.025 0
       }
@@ -56,8 +56,8 @@ DEF COMPASS_ROBOT Robot {
         }
       ]
       endPoint Solid {
-        translation -0.045000000000000005 0.025 0
-        rotation 1 0 0 4.9435250698744895
+        translation -0.044999999999999984 0.025 0
+        rotation -1 0 0 0.5455014100335893
         children [
           DEF WHEEL Transform {
             rotation 0 0 1 1.57
@@ -86,7 +86,7 @@ DEF COMPASS_ROBOT Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 1441.2312955131558
+        position 1448.9488402195796
         axis -1 0 0
         anchor 0 0.025 0
       }
@@ -100,8 +100,8 @@ DEF COMPASS_ROBOT Robot {
         }
       ]
       endPoint Solid {
-        translation 0.045 0.025 0
-        rotation -1 0 0 4.077695476210112
+        translation 0.04500000000000005 0.025 0
+        rotation 1 0 0 0.771130431725339
         children [
           USE WHEEL
         ]
@@ -276,7 +276,7 @@ DEF COMPASS_ROBOT Robot {
     }
     DEF NEEDLE HingeJoint {
       jointParameters HingeJointParameters {
-        position 0.8348030905870081
+        position -0.8479942607102086
         axis 0 1 0
         anchor 0 0.1 0
       }
@@ -287,7 +287,328 @@ DEF COMPASS_ROBOT Robot {
       ]
       endPoint Solid {
         translation 0 0.1 0
-        rotation 0 1 0 0.8348030905870081
+        rotation 0 -1 0 0.8479942607102084
+        children [
+          DEF NEEDLE_BODY Transform {
+            rotation 1 0 0 1.5708
+            children [
+              Shape {
+                appearance DEF NEEDLE_APP PBRAppearance {
+                  baseColor 1 1 0
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.1
+                  radius 0.005
+                }
+              }
+            ]
+          }
+          DEF NEEDLE_HEAD Transform {
+            translation 0 0 0.05
+            rotation 1 0 0 1.5708
+            children [
+              Shape {
+                appearance USE NEEDLE_APP
+                geometry Cone {
+                  bottomRadius 0.01
+                  height 0.02
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+  name "moving_obstacle"
+  boundingObject DEF MYBOT_BOUNDING Transform {
+    translation 0 0.0415 0
+    children [
+      USE BODY
+    ]
+  }
+  physics DEF MYBOT_PHYSICS Physics {
+    density -1
+    mass 0.5
+  }
+  controller "moving_obstacle"
+}
+DEF COMPASS_ROBOT Robot {
+  translation -1.4375638010483942 -0.00022722075432032862 -1.436500373561866
+  rotation 0.0064510073674813335 0.9998779647062822 -0.014228148114483058 2.290459626990562
+  children [
+    GPS {
+    }
+    Transform {
+      translation 0 0.0415 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.0820075 0.364731 0.8
+            roughness 1
+            metalness 0
+          }
+          geometry DEF BODY Cylinder {
+            height 0.08
+            radius 0.045
+          }
+        }
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1115.3441359039884
+        axis -1 0 0
+        anchor 0 0.025 0
+      }
+      device [
+        RotationalMotor {
+          name "left wheel motor"
+          consumptionFactor 70
+        }
+        PositionSensor {
+          name "left wheel sensor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.04500000000000002 0.025 0
+        rotation -1 0 0 4.518851840381224
+        children [
+          DEF WHEEL Transform {
+            rotation 0 0 1 1.57
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 1 0 0
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.01
+                  radius 0.025
+                }
+              }
+            ]
+          }
+        ]
+        name "left wheel"
+        boundingObject USE WHEEL
+        physics DEF PHYSICS_WHEEL Physics {
+          density -1
+          mass 0.05
+        }
+        linearVelocity 0.008508806941408311 1.8422076834679808e-07 -0.007391880686643477
+        angularVelocity -0.3280150314413678 0.25058891619421936 -0.3773727969630403
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1444.3352892165392
+        axis -1 0 0
+        anchor 0 0.025 0
+      }
+      device [
+        RotationalMotor {
+          name "right wheel motor"
+          consumptionFactor 70
+        }
+        PositionSensor {
+          name "right wheel sensor"
+        }
+      ]
+      endPoint Solid {
+        translation 0.044999999999999984 0.025 0
+        rotation 1 0 0 5.384681434765694
+        children [
+          USE WHEEL
+        ]
+        name "right wheel"
+        boundingObject USE WHEEL
+        physics USE PHYSICS_WHEEL
+        linearVelocity -0.00850462060923675 -1.0664255711389454e-07 0.0073955367437733115
+        angularVelocity 0.328009729898979 0.25058705705389783 0.37737674692460604
+      }
+    }
+    DistanceSensor {
+      translation 0.02 0.063 -0.042
+      rotation 0 1 0 1.1781
+      children [
+        DEF SENSOR Transform {
+          rotation 0 0 1 1.57
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.975691 0.981481 0.0252992
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.004
+                radius 0.008
+              }
+            }
+          ]
+        }
+      ]
+      name "ds0"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation 0.042 0.063 -0.02
+      rotation 0 1 0 0.3927
+      children [
+        USE SENSOR
+      ]
+      name "ds1"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation 0.042 0.063 0.02
+      rotation 0 1 0 5.8905
+      children [
+        USE SENSOR
+      ]
+      name "ds2"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation 0.02 0.063 0.042
+      rotation 0 1 0 5.1051
+      children [
+        USE SENSOR
+      ]
+      name "ds3"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation -0.02 0.063 0.042
+      rotation 0 1 0 4.3197
+      children [
+        USE SENSOR
+      ]
+      name "ds4"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation -0.042 0.063 0.02
+      rotation 0 1 0 3.5343
+      children [
+        USE SENSOR
+      ]
+      name "ds5"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation -0.042 0.063 -0.02
+      rotation 0 1 0 2.7489
+      children [
+        USE SENSOR
+      ]
+      name "ds6"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation -0.02 0.063 -0.042
+      rotation 0 1 0 1.9635
+      children [
+        USE SENSOR
+      ]
+      name "ds7"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    Compass {
+      translation 0 0.05 0
+    }
+    DEF SMILE Transform {
+      translation 0 0.025 -0.036
+      rotation 0.7745972408364944 0.44721228048294853 0.4472139204829502 1.8234794
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.721569 0.290196 0.290196
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.018
+            radius 0.009
+            subdivision 3
+          }
+        }
+      ]
+    }
+    DEF PIVOT Transform {
+      translation 0 0.06 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.8 0.8 0.8
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.1
+            radius 0.002
+          }
+        }
+      ]
+    }
+    DEF NEEDLE HingeJoint {
+      jointParameters HingeJointParameters {
+        position -1.581336367722726
+        axis 0 1 0
+        anchor 0 0.1 0
+      }
+      device [
+        RotationalMotor {
+          name "arrow"
+        }
+      ]
+      endPoint Solid {
+        translation 0 0.1 0
+        rotation 0 -1 0 1.5813363677227257
         children [
           DEF NEEDLE_BODY Transform {
             rotation 1 0 0 1.5708
@@ -334,55 +655,67 @@ DEF COMPASS_ROBOT Robot {
     mass 0.5
   }
   controller "apf"
+  linearVelocity -7.508019155830427e-05 -1.5665234343406698e-08 -8.69736870169729e-05
+  angularVelocity -2.6493281836104647e-06 0.2504309221017568 1.9741956783630153e-06
 }
 Ball {
-  translation 1.361232904592796 0.09991367200000002 -0.6091686227498088
+  hidden linearVelocity_0 0 -2.1746477717613114e-08 0
+  translation 1.361232904592796 0.09991367479873568 -0.6091686227498088
   radius 0.1
 }
 Ball {
-  translation 0.0770813223176873 0.09991367200000002 0.7587031605869914
+  hidden linearVelocity_0 0 -2.1746477717613114e-08 0
+  translation 0.0770813223176873 0.09991367479873568 0.7587031605869914
   name "ball(8)"
   radius 0.1
 }
 Ball {
-  translation -1.2556420598580083 0.09991367200000002 0.6463330800070315
+  hidden linearVelocity_0 0 -2.1746477717613114e-08 0
+  translation -1.2556420598580083 0.09991367479873568 0.6463330800070315
   name "ball(1)"
   color 0.9372549019607843 0.1607843137254902 0.1607843137254902
   radius 0.1
 }
 Ball {
-  translation -1.1085838515984747 0.09991367199185465 -0.8721595928144904
-  rotation -0.8978850561748696 9.863306207131903e-13 -0.44022996933177017 0.07386756473113688
+  hidden linearVelocity_0 -0.00025718704164126024 -5.389231706025136e-08 0.0005245540227118204
+  hidden angularVelocity_0 0.005214926336670028 -1.7834431041926285e-19 0.002556860530725725
+  translation -1.1094195849598572 0.09991367479157474 -0.8704550462174201
+  rotation -0.8978850561732562 1.4694366628578703e-12 -0.4402299693350606 0.05488352656616746
   name "ball(2)"
   color 0.9372549019607843 0.1607843137254902 0.1607843137254902
   radius 0.1
 }
 Ball {
-  translation -0.9097593135959073 0.09991367199897329 -0.6152758330693384
+  hidden linearVelocity_0 0 -2.1746477717613114e-08 0
+  translation -0.9097593135959073 0.09991367479873568 -0.6152758330693384
   name "ball(7)"
   color 0.9372549019607843 0.1607843137254902 0.1607843137254902
   radius 0.1
 }
 Ball {
-  translation 0.016867214550960408 0.09991367200000002 -0.6676458635089411
+  hidden linearVelocity_0 0 -2.1746477717613114e-08 0
+  translation 0.016867214550960408 0.09991367479873568 -0.6676458635089411
   name "ball(3)"
   color 0.9372549019607843 0.1607843137254902 0.1607843137254902
   radius 0.1
 }
 Ball {
-  translation 0.8981548045464635 0.09991367200000002 -0.7426673727524244
+  hidden linearVelocity_0 0 -2.1746477717613114e-08 0
+  translation 0.8981548045464635 0.09991367479873568 -0.7426673727524244
   name "ball(4)"
   color 0.9372549019607843 0.1607843137254902 0.1607843137254902
   radius 0.1
 }
 Ball {
-  translation 0.7526659831878163 0.09991367200000002 0.3976426090330083
+  hidden linearVelocity_0 0 -2.1746477717613114e-08 0
+  translation 0.7526659831878163 0.09991367479873568 0.3976426090330083
   name "ball(5)"
   color 0.9372549019607843 0.1607843137254902 0.1607843137254902
   radius 0.1
 }
 Ball {
-  translation 0.571706567571066 0.09991367200000002 0.9977683873012744
+  hidden linearVelocity_0 0 -2.1746477717613114e-08 0
+  translation 0.571706567571066 0.09991367479873568 0.9977683873012744
   name "ball(6)"
   color 0.9372549019607843 0.1607843137254902 0.1607843137254902
   radius 0.1
